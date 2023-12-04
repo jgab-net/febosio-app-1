@@ -1,16 +1,20 @@
 import { useState } from 'react'
 import { Message } from '@febosio/ui';
+import { MessageService, useConsoleEffect } from '@febosio/services';
 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
 function App() {
+  useConsoleEffect();
   const [count, setCount] = useState(0)
 
   return (
     <>
       <Message text="hola claudio" />
+      <MessageService />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
